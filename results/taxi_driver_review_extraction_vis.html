@@ -1,0 +1,376 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+[Reviewer: scorkery-762-655265] 
+Rating: 9/10 
+Review: <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">One scene that has stuck with me for 44 yrs...</span> Just a little side note, an 
+observation from one scene that has stayed with me since I first saw this movie 
+nearly 45 yrs ago. It&#x27;s the middle of the movie when Travis is going thru his 
+metamorphosis from simple-minded taxi driver to full on psychotic 
+protector/vigilante; the iconic &quot;You talkin&#x27; to me?&quot; scene. He&#x27;s in his drab apartment 
+watching American Bandstand and as Jackson Browne&#x27;s <span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">achingly beautiful song</span> 
+&quot;Late For The Sky&quot; plays, the AB dancers sway slowly to the beat, holding each other 
+close...teenagers in love having a tender moment. <span class="lx-highlight" data-idx="2" style="background-color:#D2E3FC;">Travis&#x27; face shows how 
+desperately lonely he is</span>; how he&#x27;s probably never even danced with a girl in his life, 
+much less had a normal relationship with one and how he needs to make a love 
+connection with the Jodie Foster or Cybill Shepherd characters in a most sensational 
+way. To me, a crystallizing scene that moves the story along to its&#x27; inevitable 
+shocking end. 
+
+[Reviewer: BA_Harrison] 
+Rating: 7/10 
+Review: A classy character study of a disturbed individual—but what is the point? 
+Insomniac Vietnam veteran Travis Bickle (Robert De Niro) takes a job driving a New 
+York taxi cab, becomes obsessed with beautiful political campaigner Betsy (Cybill 
+Shepherd), who gives him the cold shoulder after he tries to take her to a skin flick on 
+a date. Bickle then becomes obsessed with underage hooker Iris (Jodie Foster), buys 
+lots of guns, and goes trigger happy on her pimp (Harvey Keitel). 
+
+As a fan of gritty 70s movie-making, <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">I find it hard to believe that, until now, I hadn&#x27;t 
+seen Martin Scorsese&#x27;s Taxi Driver</span>; I think perhaps the problem was that, having 
+heard so many good things about the film, <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">I didn&#x27;t want to risk disappointment</span>. 
+Unfortunately, <span class="lx-highlight" data-idx="5" style="background-color:#D2E3FC;">that&#x27;s precisely what I felt when I finally got around to watching the 
+film</span>. 
+
+It&#x27;s not that it&#x27;s a bad movie by any stretch of the imagination-on the contrary, it&#x27;s a 
+<span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">skilfully assembled character study of a self-destructive loose cannon that boasts 
+excellent cinematography, great music, and superb performances</span>-BUT in the end it 
+<span class="lx-highlight" data-idx="7" style="background-color:#D2E3FC;">just didn&#x27;t grab me as much as I would have liked</span>. The story progresses very slowly, 
+which in itself isn&#x27;t a massive issue for me, but <span class="lx-highlight" data-idx="8" style="background-color:#D2E3FC;">the payoff simply isn&#x27;t as satisfying 
+as I felt it needed to be</span> given all that has gone before. 
+
+After all of his stalking, inane rambling and meticulous planning, Travis Bickle&#x27;s 
+rampage is over in a flash, after which he is proclaimed a hero and freed to roam the 
+streets once more (unless you prescribe to the theory that everything after the 
+shootout is in Bickle&#x27;s mind as he slowly bleeds to death). Perhaps Scorsese&#x27;s point
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+was to show us just how easy it is for a dangerous loony like Bickle to be overlooked 
+by society until its too late-but <span class="lx-highlight" data-idx="9" style="background-color:#D2E3FC;">it sure felt like a letdown to me</span>. 
+
+6.5 out of 10, rounded up to 7 for Keitel&#x27;s hair. 
+
+[Reviewer: PyroSikTh] 
+Rating: 7/10 
+Review: Not Quite Sure on the Acclaim Taxi Driver, if you weren&#x27;t aware, follows a 
+New York City taxi driver called Travis Bickle as he descends into a state of 
+masculine madness. Along the way he courts Betsy, a member of a local campaign 
+for a presidential candidate, continuously runs into Iris, an underage prostitute, sits 
+on the outside of his cab-driving colleagues, and has his worldview shaped by the 
+men and women he ferries all over the city. Spoilers; it&#x27;s not a very healthy worldview 
+at all. Taking on the night shift leaves him with a darkened view of a world run by 
+pimps, junkies, thieves, and murderers. He suffers crippling insomnia which leaves 
+him either alone in his apartment fantasising about the man he wants to be, or 
+huddled in a porno theatre, the irony completely lost on him. 
+
+Taxi Driver is, at its core, <span class="lx-highlight" data-idx="10" style="background-color:#D2E3FC;">a character study of a lonely and unstable young man</span>. 
+Coupled with its 70s style of filmmaking, this results in it being a super slow movie, 
+far slower than I anticipated. In truth, this is a big reason why <span class="lx-highlight" data-idx="11" style="background-color:#D2E3FC;">it was so hard for me 
+to really get into</span>. Half the movie is spent watching the debacle between Travis and 
+Betsy play out, as he stalks her, awkwardly asks her out, promptly loses her after 
+taking her to watch a porno on their first date (an act so seeped in Travis&#x27; own 
+disillusion that <span class="lx-highlight" data-idx="12" style="background-color:#D2E3FC;">it&#x27;s painful to watch</span>), and desperately trying to contact her to get a 
+second chance. The function of all of this is essential, painting up not only how 
+socially awkward and disconnected Travis is, but also really hammering in his 
+loneliness, as the final straw that causes him to snap. Problem is, as I mentioned, 
+<span class="lx-highlight" data-idx="13" style="background-color:#D2E3FC;">this takes up half the movie</span>. It&#x27;s a catalyst to his descent into madness and the 
+crippling loneliness he endures, but it doesn&#x27;t portray either of things directly. If he 
+had just taken her to a normal movie theatre or for an innocent dinner, he probably 
+would&#x27;ve won her heart and enjoyed a fruitful relationship that helped him turn his life 
+around. But this movie isn&#x27;t so much about what could&#x27;ve been, and for the catalyst 
+to take up so much screentime just <span class="lx-highlight" data-idx="14" style="background-color:#D2E3FC;">slows the pacing of the movie right down</span>. It also 
+takes remarkably too long for Iris to even be introduced, and once she is she 
+disappears again for large portions of the movie (likewise, Betsy is almost 
+completely absent after the breakup). I can certainly get behind Travis becoming 
+obsessed with someone he sees in quick, short bursts, but when he only shows that 
+obsession when she&#x27;s physically there before him, it results in her presence being 
+almost entirely diminished in between.
+&quot;&quot;&quot;
+
+**Page 3**
+&quot;&quot;&quot;
+Of course I fully recognise that both those points are about characters that this 
+movie strictly isn&#x27;t about. Betsy and Iris are ultimately just plot devices put in there to 
+drive Travis&#x27; character and giving him the motivation to do whatever he chooses to 
+do as the movie goes along. His anger eventually reaches a boiling point, and his first 
+target is Senator Palantine, the presidential candidate Betsy works for, if for no other 
+reason than getting back at Betsy. However he&#x27;s discouraged at the last minute and 
+instead points his anger as the trio of pimps Iris works for. <span class="lx-highlight" data-idx="15" style="background-color:#D2E3FC;">One thing I did really like 
+about this movie was the juxtaposition between those two choices</span>. Travis needs to 
+take his anger out on someone, and he&#x27;s sick of the &quot;filth&quot; he sees lining the streets 
+every night, and takes it upon himself to clean it up. If he had assassinated Palantine 
+as he originally intended, he&#x27;d have been prosecuted as a villain with a political 
+agenda, despite being horrifically naïve of the politics around him. Instead he&#x27;s hailed 
+as a hero for taking out delinquents and criminals. And this is where the film&#x27;s 
+biggest commentary on society as a whole comes in. To him, both Palantine and the 
+criminals represent the same issues, but because he took out his anger on the 
+undesirables of the city, he ends up celebrated. The local newspapers have no 
+problems in branding this unstable, unhinged vigilante as a hero. 
+
+<span class="lx-highlight" data-idx="16" style="background-color:#D2E3FC;">The film becomes a direct mockery of the hero complex.</span> <span class="lx-highlight" data-idx="17" style="background-color:#D2E3FC;">Violent, angry men are 
+praised for cleaning up the world and saving the damsel because what they do is 
+ultimately seen as good, when really they&#x27;re just deranged sociopaths who are 
+unable to express themselves any other way</span>. <span class="lx-highlight" data-idx="18" style="background-color:#D2E3FC;">This is all fantastic, but this late in my 
+life it&#x27;s nothing new</span>. <span class="lx-highlight" data-idx="19" style="background-color:#D2E3FC;">I guarantee I&#x27;d have felt differently back in 1976, and no doubt 
+that&#x27;s why it&#x27;s earned as much acclaim as it has</span>. <span class="lx-highlight" data-idx="20" style="background-color:#D2E3FC;">But now, today, I&#x27;ve seen this story a 
+hundred times</span>. <span class="lx-highlight" data-idx="21" style="background-color:#D2E3FC;">I&#x27;ve seen this examination of the hero complex a hundred times</span>. <span class="lx-highlight" data-idx="22" style="background-color:#D2E3FC;">I&#x27;ve 
+seen the anti-hero myth torn apart and put back together so many times I don&#x27;t even 
+know what&#x27;s being clever or just riffing off other stories any more</span>. While watching 
+Taxi Driver, I instantly saw all manner of other characters in Travis Bickle, from 
+Batman or Joker, to Punisher or Rorschach, from American Psycho to Nightcrawler 
+or You Were Never Really Here. <span class="lx-highlight" data-idx="23" style="background-color:#D2E3FC;">So ultimately the question boils down to which ones 
+did it better</span>? And honestly Taxi Driver doesn&#x27;t feature all that high up for me. Just 
+because it was the first doesn&#x27;t mean it&#x27;s the best. 
+
+Don&#x27;t get me wrong, I&#x27;m not saying Taxi Driver <span class="lx-highlight" data-idx="24" style="background-color:#D2E3FC;">doesn&#x27;t deserve the acclaim it 
+continues to receive</span>. <span class="lx-highlight" data-idx="25" style="background-color:#D2E3FC;">I didn&#x27;t like how slow and somewhat badly paced it was</span>, nor did 
+<span class="lx-highlight" data-idx="26" style="background-color:#D2E3FC;">I</span> like Bernard Herrman&#x27;s score which feels misplaced and repetitive, but <span class="lx-highlight" data-idx="27" style="background-color:#D2E3FC;">it&#x27;s not a bad 
+movie by any means</span>. <span class="lx-highlight" data-idx="28" style="background-color:#D2E3FC;">The dialogue is real and relatable</span>, <span class="lx-highlight" data-idx="29" style="background-color:#D2E3FC;">De Niro&#x27; performance is next 
+level stuff</span>, <span class="lx-highlight" data-idx="30" style="background-color:#D2E3FC;">the camera work is often creative and interesting</span>, <span class="lx-highlight" data-idx="31" style="background-color:#D2E3FC;">creating imagery that&#x27;ll 
+stick with you forever</span>, and no matter how many times the general story of a lonely, 
+angry, unstable individual going on violent killing sprees and carefully toeing the line 
+between hero and villain has been told, <span class="lx-highlight" data-idx="32" style="background-color:#D2E3FC;">it&#x27;ll never be one to ignore</span>. <span class="lx-highlight" data-idx="33" style="background-color:#D2E3FC;">I give Taxi Driver a 
+decent 7/10</span>. Go ahead and tell me why I&#x27;m wrong, or what I&#x27;ve clearly missed,
+&quot;&quot;&quot;
+
+**Page 4**
+&quot;&quot;&quot;
+because I&#x27;m nearly tearing my hair out trying to figure out why this movie is quite as 
+<span class="lx-highlight" data-idx="34" style="background-color:#D2E3FC;">highly regarded as it is</span>. 
+
+[Reviewer: andrew7] 
+Rating: 10/10 
+Review: <span class="lx-highlight" data-idx="35" style="background-color:#D2E3FC;">Disturbing, powerful, relevant, important</span> 
+. A <span class="lx-highlight" data-idx="36" style="background-color:#D2E3FC;">towering classic of American cinematic power</span>. Martin Scorsese teams up with 
+one of the most intense actors of that time to <span class="lx-highlight" data-idx="37" style="background-color:#D2E3FC;">create a masterpiece of urban 
+alienation</span>. Paul Schrader&#x27;s <span class="lx-highlight" data-idx="38" style="background-color:#D2E3FC;">magnificent script</span> paints a portrait of loneliness in the 
+largest city of the world. Travis never once enters into a meaningful relationship with 
+any character anywhere in the film. He is the most <span class="lx-highlight" data-idx="39" style="background-color:#D2E3FC;">hopelessly alone person</span> I&#x27;ve ever 
+encountered on film. 
+
+He is alone with his thoughts, and his thoughts are dark ones. The film fools you on a 
+first viewing. Is Travis an <span class="lx-highlight" data-idx="40" style="background-color:#D2E3FC;">endearing eccentric</span>? Sure, he&#x27;s odd, but he&#x27;s so polite, and 
+he&#x27;s got a quirky sense of humor. His affection for Betsy is actually <span class="lx-highlight" data-idx="41" style="background-color:#D2E3FC;">rather endearing</span>. 
+But on a second view, you see it for what it is. The audience comes to see Travis&#x27;s 
+psychosis gradually, but there&#x27;s actually far less development than one might think. 
+When he talks about cleaning up the city, the repeat viewer knows he doesn&#x27;t mean 
+some sort of Giuliani-facelift. This is less a film about a character in development as 
+it is a kind of snapshot. To be sure, it takes the stimulus to provoke the response, but 
+does that imply some kind of central change in the character? 
+
+<span class="lx-highlight" data-idx="42" style="background-color:#D2E3FC;">Tremendous supporting roles are brought to life through vivid performances by 
+Keitel and Foster especially</span>. <span class="lx-highlight" data-idx="43" style="background-color:#D2E3FC;">Shepard&#x27;s character, Betsy, is little more than a foil to 
+highlight Travis&#x27;s utter alienation from society, but she is still impeccably portrayed</span>. 
+With only two scenes that don&#x27;t center on Travis, <span class="lx-highlight" data-idx="44" style="background-color:#D2E3FC;">it is unavoidably De Niro&#x27;s show</span>. The 
+life with which the supporting cast imbues their characters is a credit to themselves, 
+and to the director&#x27;s willingness to let the film develop from the intersection of 
+diverse ideas and approaches. What would the plot lose by eliminating the Albert 
+Brooks character (Tom)? Nothing at all. He makes almost no impact on Travis&#x27;s life, 
+which is where the plot lives. But his inclusion makes the film as a whole much richer 
+and fuller. 
+
+<span class="lx-highlight" data-idx="45" style="background-color:#D2E3FC;">As a piece of American cinema history, this film will live forever</span>. But far more 
+important than that, <span class="lx-highlight" data-idx="46" style="background-color:#D2E3FC;">this film will survive as a universal, ever-relevant examination of 
+the workings of the alienated mind</span>. The story doesn&#x27;t end when the credits roll. We 
+know Travis will snap again. But the story doesn&#x27;t end with Travis either. It continues 
+today in the cities and in the schools. <span class="lx-highlight" data-idx="47" style="background-color:#D2E3FC;">The film is about the brutal power of the 
+disaffected mind</span>.
+&quot;&quot;&quot;
+
+**Page 5**
+&quot;&quot;&quot;
+<span class="lx-highlight" data-idx="48" style="background-color:#D2E3FC;">This film didn&#x27;t cause the incidents in Colombine, or Hawaii, or Seattle, or wherever 
+you care to look, even with all of its disturbing images of violence.</span> It didn&#x27;t cause 
+those things. <span class="lx-highlight" data-idx="49" style="background-color:#D2E3FC;">It predicted them.</span>
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="49" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/50</span> |
+          Pos <span id="posInfo">[70-116]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "One scene that has stuck with me for 44 yrs...", "color": "#D2E3FC", "startPos": 70, "endPos": 116, "beforeText": "**Page 1**\n&quot;&quot;&quot;\n[Reviewer: scorkery-762-655265] \nRating: 9/10 \nReview: ", "extractionText": "One scene that has stuck with me for 44 yrs...", "afterText": " Just a little side note, an \nobservation from one scene that has stayed with me since I first saw this movie \nnearly 45 yrs ago. It&#x27;s the middle of t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">scene</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">stuck with me</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "achingly beautiful song", "color": "#D2E3FC", "startPos": 513, "endPos": 536, "beforeText": "sychotic \nprotector/vigilante; the iconic &quot;You talkin&#x27; to me?&quot; scene. He&#x27;s in his drab apartment \nwatching American Bandstand and as Jackson Browne&#x27;s ", "extractionText": "achingly beautiful song", "afterText": " \n&quot;Late For The Sky&quot; plays, the AB dancers sway slowly to the beat, holding each other \nclose...teenagers in love having a tender moment. Travis&#x27; face", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">song</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">beautiful</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "Travis' face shows how desperately lonely he is", "color": "#D2E3FC", "startPos": 674, "endPos": 722, "beforeText": "autiful song \n&quot;Late For The Sky&quot; plays, the AB dancers sway slowly to the beat, holding each other \nclose...teenagers in love having a tender moment. ", "extractionText": "Travis&#x27; face shows how \ndesperately lonely he is", "afterText": "; how he&#x27;s probably never even danced with a girl in his life, \nmuch less had a normal relationship with one and how he needs to make a love \nconnecti", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Travis&#x27; face</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">desperately lonely</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "I find it hard to believe that, until now, I hadn't seen Martin Scorsese's Taxi Driver", "color": "#D2E3FC", "startPos": 1618, "endPos": 1705, "beforeText": " underage hooker Iris (Jodie Foster), buys \nlots of guns, and goes trigger happy on her pimp (Harvey Keitel). \n \nAs a fan of gritty 70s movie-making, ", "extractionText": "I find it hard to believe that, until now, I hadn&#x27;t \nseen Martin Scorsese&#x27;s Taxi Driver", "afterText": "; I think perhaps the problem was that, having \nheard so many good things about the film, I didn&#x27;t want to risk disappointment. \nUnfortunately, that&#x27;s", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">hard to believe that I hadn&#x27;t seen</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "I didn't want to risk disappointment", "color": "#D2E3FC", "startPos": 1795, "endPos": 1831, "beforeText": "hat, until now, I hadn&#x27;t \nseen Martin Scorsese&#x27;s Taxi Driver; I think perhaps the problem was that, having \nheard so many good things about the film, ", "extractionText": "I didn&#x27;t want to risk disappointment", "afterText": ". \nUnfortunately, that&#x27;s precisely what I felt when I finally got around to watching the \nfilm. \n \nIt&#x27;s not that it&#x27;s a bad movie by any stretch of th", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">risk disappointment</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "that's precisely what I felt when I finally got around to watching the film", "color": "#D2E3FC", "startPos": 1849, "endPos": 1925, "beforeText": "Driver; I think perhaps the problem was that, having \nheard so many good things about the film, I didn&#x27;t want to risk disappointment. \nUnfortunately, ", "extractionText": "that&#x27;s precisely what I felt when I finally got around to watching the \nfilm", "afterText": ". \n \nIt&#x27;s not that it&#x27;s a bad movie by any stretch of the imagination-on the contrary, it&#x27;s a \nskilfully assembled character study of a self-destructi", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">felt</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "skilfully assembled character study of a self-destructive loose cannon that boasts excellent cinematography, great music, and superb performances", "color": "#D2E3FC", "startPos": 2020, "endPos": 2166, "beforeText": " I felt when I finally got around to watching the \nfilm. \n \nIt&#x27;s not that it&#x27;s a bad movie by any stretch of the imagination-on the contrary, it&#x27;s a \n", "extractionText": "skilfully assembled character study of a self-destructive loose cannon that boasts \nexcellent cinematography, great music, and superb performances", "afterText": "-BUT in the end it \njust didn&#x27;t grab me as much as I would have liked. The story progresses very slowly, \nwhich in itself isn&#x27;t a massive issue for me", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">character study</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">skilfully assembled</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "just didn't grab me as much as I would have liked", "color": "#D2E3FC", "startPos": 2186, "endPos": 2235, "beforeText": "led character study of a self-destructive loose cannon that boasts \nexcellent cinematography, great music, and superb performances-BUT in the end it \n", "extractionText": "just didn&#x27;t grab me as much as I would have liked", "afterText": ". The story progresses very slowly, \nwhich in itself isn&#x27;t a massive issue for me, but the payoff simply isn&#x27;t as satisfying \nas I felt it needed to b", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">didn&#x27;t grab me</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "the payoff simply isn't as satisfying as I felt it needed to be", "color": "#D2E3FC", "startPos": 2322, "endPos": 2386, "beforeText": "n the end it \njust didn&#x27;t grab me as much as I would have liked. The story progresses very slowly, \nwhich in itself isn&#x27;t a massive issue for me, but ", "extractionText": "the payoff simply isn&#x27;t as satisfying \nas I felt it needed to be", "afterText": " given all that has gone before. \n \nAfter all of his stalking, inane rambling and meticulous planning, Travis Bickle&#x27;s \nrampage is over in a flash, af", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">payoff</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">isn&#x27;t as satisfying</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "it sure felt like a letdown to me", "color": "#D2E3FC", "startPos": 2900, "endPos": 2933, "beforeText": "&#x27;s point\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nwas to show us just how easy it is for a dangerous loony like Bickle to be overlooked \nby society until its too late-but ", "extractionText": "it sure felt like a letdown to me", "afterText": ". \n \n6.5 out of 10, rounded up to 7 for Keitel&#x27;s hair. \n \n[Reviewer: PyroSikTh] \nRating: 7/10 \nReview: Not Quite Sure on the Acclaim Taxi Driver, if y", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">felt like a letdown</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "a character study of a lonely and unstable young man", "color": "#D2E3FC", "startPos": 3875, "endPos": 3927, "beforeText": "apartment fantasising about the man he wants to be, or \nhuddled in a porno theatre, the irony completely lost on him. \n \nTaxi Driver is, at its core, ", "extractionText": "a character study of a lonely and unstable young man", "afterText": ". \nCoupled with its 70s style of filmmaking, this results in it being a super slow movie, \nfar slower than I anticipated. In truth, this is a big reas", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">a character study of a lonely and unstable young man</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "it was so hard for me to really get into", "color": "#D2E3FC", "startPos": 4084, "endPos": 4125, "beforeText": "led with its 70s style of filmmaking, this results in it being a super slow movie, \nfar slower than I anticipated. In truth, this is a big reason why ", "extractionText": "it was so hard for me \nto really get into", "afterText": ". Half the movie is spent watching the debacle between Travis and \nBetsy play out, as he stalks her, awkwardly asks her out, promptly loses her after ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">it</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">hard for me to really get into</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "it's painful to watch", "color": "#D2E3FC", "startPos": 4375, "endPos": 4396, "beforeText": " awkwardly asks her out, promptly loses her after \ntaking her to watch a porno on their first date (an act so seeped in Travis&#x27; own \ndisillusion that ", "extractionText": "it&#x27;s painful to watch", "afterText": "), and desperately trying to contact her to get a \nsecond chance. The function of all of this is essential, painting up not only how \nsocially awkward", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">it</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">painful to watch</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "this takes up half the movie", "color": "#D2E3FC", "startPos": 4694, "endPos": 4722, "beforeText": "rd and disconnected Travis is, but also really hammering in his \nloneliness, as the final straw that causes him to snap. Problem is, as I mentioned, \n", "extractionText": "this takes up half the movie", "afterText": ". It&#x27;s a catalyst to his descent into madness and the \ncrippling loneliness he endures, but it doesn&#x27;t portray either of things directly. If he \nhad j", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">catalyst</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">takes up half the movie</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "slows the pacing of the movie right down", "color": "#D2E3FC", "startPos": 5162, "endPos": 5202, "beforeText": "hat helped him turn his life \naround. But this movie isn&#x27;t so much about what could&#x27;ve been, and for the catalyst \nto take up so much screentime just ", "extractionText": "slows the pacing of the movie right down", "afterText": ". It also \ntakes remarkably too long for Iris to even be introduced, and once she is she \ndisappears again for large portions of the movie (likewise, ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">catalyst</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">slows the pacing of the movie right down</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "One thing I did really like about this movie was the juxtaposition between those two choices", "color": "#D2E3FC", "startPos": 6262, "endPos": 6355, "beforeText": "er \nreason than getting back at Betsy. However he&#x27;s discouraged at the last minute and \ninstead points his anger as the trio of pimps Iris works for. ", "extractionText": "One thing I did really like \nabout this movie was the juxtaposition between those two choices", "afterText": ". Travis needs to \ntake his anger out on someone, and he&#x27;s sick of the &quot;filth&quot; he sees lining the streets \nevery night, and takes it upon himself to c", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">juxtaposition between those two choices</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">really like</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "The film becomes a direct mockery of the hero complex.", "color": "#D2E3FC", "startPos": 7117, "endPos": 7171, "beforeText": " \nundesirables of the city, he ends up celebrated. The local newspapers have no \nproblems in branding this unstable, unhinged vigilante as a hero. \n \n", "extractionText": "The film becomes a direct mockery of the hero complex.", "afterText": " Violent, angry men are \npraised for cleaning up the world and saving the damsel because what they do is \nultimately seen as good, when really they&#x27;re", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">mockery of the hero complex</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "Violent, angry men are praised for cleaning up the world and saving the damsel because what they do is ultimately seen as good, when really they're just deranged sociopaths who are unable to express themselves any other way", "color": "#D2E3FC", "startPos": 7172, "endPos": 7398, "beforeText": "local newspapers have no \nproblems in branding this unstable, unhinged vigilante as a hero. \n \nThe film becomes a direct mockery of the hero complex. ", "extractionText": "Violent, angry men are \npraised for cleaning up the world and saving the damsel because what they do is \nultimately seen as good, when really they&#x27;re just deranged sociopaths who are \nunable to express themselves any other way", "afterText": ". This is all fantastic, but this late in my \nlife it&#x27;s nothing new. I guarantee I&#x27;d have felt differently back in 1976, and no doubt \nthat&#x27;s why it&#x27;s", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Violent, angry men</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">deranged sociopaths</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "This is all fantastic, but this late in my life it's nothing new", "color": "#D2E3FC", "startPos": 7400, "endPos": 7465, "beforeText": "l because what they do is \nultimately seen as good, when really they&#x27;re just deranged sociopaths who are \nunable to express themselves any other way. ", "extractionText": "This is all fantastic, but this late in my \nlife it&#x27;s nothing new", "afterText": ". I guarantee I&#x27;d have felt differently back in 1976, and no doubt \nthat&#x27;s why it&#x27;s earned as much acclaim as it has. But now, today, I&#x27;ve seen this s", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">story</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">nothing new</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "I guarantee I'd have felt differently back in 1976, and no doubt that's why it's earned as much acclaim as it has", "color": "#D2E3FC", "startPos": 7467, "endPos": 7581, "beforeText": "y&#x27;re just deranged sociopaths who are \nunable to express themselves any other way. This is all fantastic, but this late in my \nlife it&#x27;s nothing new. ", "extractionText": "I guarantee I&#x27;d have felt differently back in 1976, and no doubt \nthat&#x27;s why it&#x27;s earned as much acclaim as it has", "afterText": ". But now, today, I&#x27;ve seen this story a \nhundred times. I&#x27;ve seen this examination of the hero complex a hundred times. I&#x27;ve \nseen the anti-hero myth", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">earned as much acclaim</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "But now, today, I've seen this story a hundred times", "color": "#D2E3FC", "startPos": 7583, "endPos": 7636, "beforeText": "ate in my \nlife it&#x27;s nothing new. I guarantee I&#x27;d have felt differently back in 1976, and no doubt \nthat&#x27;s why it&#x27;s earned as much acclaim as it has. ", "extractionText": "But now, today, I&#x27;ve seen this story a \nhundred times", "afterText": ". I&#x27;ve seen this examination of the hero complex a hundred times. I&#x27;ve \nseen the anti-hero myth torn apart and put back together so many times I don&#x27;t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">story</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">seen this story a hundred times</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "I've seen this examination of the hero complex a hundred times", "color": "#D2E3FC", "startPos": 7638, "endPos": 7700, "beforeText": "felt differently back in 1976, and no doubt \nthat&#x27;s why it&#x27;s earned as much acclaim as it has. But now, today, I&#x27;ve seen this story a \nhundred times. ", "extractionText": "I&#x27;ve seen this examination of the hero complex a hundred times", "afterText": ". I&#x27;ve \nseen the anti-hero myth torn apart and put back together so many times I don&#x27;t even \nknow what&#x27;s being clever or just riffing off other storie", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">examination of the hero complex</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">seen this examination a hundred times</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "I've seen the anti-hero myth torn apart and put back together so many times I don't even know what's being clever or just riffing off other stories any more", "color": "#D2E3FC", "startPos": 7702, "endPos": 7860, "beforeText": "ned as much acclaim as it has. But now, today, I&#x27;ve seen this story a \nhundred times. I&#x27;ve seen this examination of the hero complex a hundred times. ", "extractionText": "I&#x27;ve \nseen the anti-hero myth torn apart and put back together so many times I don&#x27;t even \nknow what&#x27;s being clever or just riffing off other stories any more", "afterText": ". While watching \nTaxi Driver, I instantly saw all manner of other characters in Travis Bickle, from \nBatman or Joker, to Punisher or Rorschach, from ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">anti-hero myth</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">torn apart and put back together so many times</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "So ultimately the question boils down to which ones did it better", "color": "#D2E3FC", "startPos": 8074, "endPos": 8140, "beforeText": "er characters in Travis Bickle, from \nBatman or Joker, to Punisher or Rorschach, from American Psycho to Nightcrawler \nor You Were Never Really Here. ", "extractionText": "So ultimately the question boils down to which ones \ndid it better", "afterText": "? And honestly Taxi Driver doesn&#x27;t feature all that high up for me. Just \nbecause it was the first doesn&#x27;t mean it&#x27;s the best. \n \nDon&#x27;t get me wrong, ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">which ones did it better</span>}</div>"}, {"index": 24, "class": "opinion_statement", "text": "doesn't deserve the acclaim it continues to receive", "color": "#D2E3FC", "startPos": 8317, "endPos": 8369, "beforeText": "doesn&#x27;t feature all that high up for me. Just \nbecause it was the first doesn&#x27;t mean it&#x27;s the best. \n \nDon&#x27;t get me wrong, I&#x27;m not saying Taxi Driver ", "extractionText": "doesn&#x27;t deserve the acclaim it \ncontinues to receive", "afterText": ". I didn&#x27;t like how slow and somewhat badly paced it was, nor did \nI like Bernard Herrman&#x27;s score which feels misplaced and repetitive, but it&#x27;s not a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">doesn&#x27;t deserve the acclaim</span>}</div>"}, {"index": 25, "class": "opinion_statement", "text": "I didn't like how slow and somewhat badly paced it was", "color": "#D2E3FC", "startPos": 8371, "endPos": 8425, "beforeText": " it was the first doesn&#x27;t mean it&#x27;s the best. \n \nDon&#x27;t get me wrong, I&#x27;m not saying Taxi Driver doesn&#x27;t deserve the acclaim it \ncontinues to receive. ", "extractionText": "I didn&#x27;t like how slow and somewhat badly paced it was", "afterText": ", nor did \nI like Bernard Herrman&#x27;s score which feels misplaced and repetitive, but it&#x27;s not a bad \nmovie by any means. The dialogue is real and relat", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">didn&#x27;t like how slow and somewhat badly paced it was</span>}</div>"}, {"index": 26, "class": "opinion_statement", "text": "I didn't like Bernard Herrman's score which feels misplaced and repetitive", "color": "#D2E3FC", "startPos": 8436, "endPos": 8437, "beforeText": "ng, I&#x27;m not saying Taxi Driver doesn&#x27;t deserve the acclaim it \ncontinues to receive. I didn&#x27;t like how slow and somewhat badly paced it was, nor did \n", "extractionText": "I", "afterText": " like Bernard Herrman&#x27;s score which feels misplaced and repetitive, but it&#x27;s not a bad \nmovie by any means. The dialogue is real and relatable, De Nir", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Bernard Herrman&#x27;s score</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">didn&#x27;t like Bernard Herrman&#x27;s score which feels misplaced and repetitive</span>}</div>"}, {"index": 27, "class": "opinion_statement", "text": "it's not a bad movie by any means", "color": "#D2E3FC", "startPos": 8509, "endPos": 8543, "beforeText": "to receive. I didn&#x27;t like how slow and somewhat badly paced it was, nor did \nI like Bernard Herrman&#x27;s score which feels misplaced and repetitive, but ", "extractionText": "it&#x27;s not a bad \nmovie by any means", "afterText": ". The dialogue is real and relatable, De Niro&#x27; performance is next \nlevel stuff, the camera work is often creative and interesting, creating imagery t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not a bad movie</span>}</div>"}, {"index": 28, "class": "opinion_statement", "text": "The dialogue is real and relatable", "color": "#D2E3FC", "startPos": 8545, "endPos": 8579, "beforeText": "nd somewhat badly paced it was, nor did \nI like Bernard Herrman&#x27;s score which feels misplaced and repetitive, but it&#x27;s not a bad \nmovie by any means. ", "extractionText": "The dialogue is real and relatable", "afterText": ", De Niro&#x27; performance is next \nlevel stuff, the camera work is often creative and interesting, creating imagery that&#x27;ll \nstick with you forever, and ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">dialogue</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">real and relatable</span>}</div>"}, {"index": 29, "class": "opinion_statement", "text": "De Niro' performance is next level stuff", "color": "#D2E3FC", "startPos": 8581, "endPos": 8622, "beforeText": "did \nI like Bernard Herrman&#x27;s score which feels misplaced and repetitive, but it&#x27;s not a bad \nmovie by any means. The dialogue is real and relatable, ", "extractionText": "De Niro&#x27; performance is next \nlevel stuff", "afterText": ", the camera work is often creative and interesting, creating imagery that&#x27;ll \nstick with you forever, and no matter how many times the general story ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">De Niro&#x27; performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">next level stuff</span>}</div>"}, {"index": 30, "class": "opinion_statement", "text": "the camera work is often creative and interesting", "color": "#D2E3FC", "startPos": 8624, "endPos": 8673, "beforeText": "eels misplaced and repetitive, but it&#x27;s not a bad \nmovie by any means. The dialogue is real and relatable, De Niro&#x27; performance is next \nlevel stuff, ", "extractionText": "the camera work is often creative and interesting", "afterText": ", creating imagery that&#x27;ll \nstick with you forever, and no matter how many times the general story of a lonely, \nangry, unstable individual going on v", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">camera work</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">creative and interesting</span>}</div>"}, {"index": 31, "class": "opinion_statement", "text": "creating imagery that'll stick with you forever", "color": "#D2E3FC", "startPos": 8675, "endPos": 8723, "beforeText": "movie by any means. The dialogue is real and relatable, De Niro&#x27; performance is next \nlevel stuff, the camera work is often creative and interesting, ", "extractionText": "creating imagery that&#x27;ll \nstick with you forever", "afterText": ", and no matter how many times the general story of a lonely, \nangry, unstable individual going on violent killing sprees and carefully toeing the lin", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">camera work</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">creating imagery that&#x27;ll stick with you forever</span>}</div>"}, {"index": 32, "class": "opinion_statement", "text": "it'll never be one to ignore", "color": "#D2E3FC", "startPos": 8916, "endPos": 8944, "beforeText": "story of a lonely, \nangry, unstable individual going on violent killing sprees and carefully toeing the line \nbetween hero and villain has been told, ", "extractionText": "it&#x27;ll never be one to ignore", "afterText": ". I give Taxi Driver a \ndecent 7/10. Go ahead and tell me why I&#x27;m wrong, or what I&#x27;ve clearly missed,\n&quot;&quot;&quot;\n\n**Page 4**\n&quot;&quot;&quot;\nbecause I&#x27;m nearly tearing m", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">story</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">never be one to ignore</span>}</div>"}, {"index": 33, "class": "opinion_statement", "text": "I give Taxi Driver a decent 7/10", "color": "#D2E3FC", "startPos": 8946, "endPos": 8979, "beforeText": "table individual going on violent killing sprees and carefully toeing the line \nbetween hero and villain has been told, it&#x27;ll never be one to ignore. ", "extractionText": "I give Taxi Driver a \ndecent 7/10", "afterText": ". Go ahead and tell me why I&#x27;m wrong, or what I&#x27;ve clearly missed,\n&quot;&quot;&quot;\n\n**Page 4**\n&quot;&quot;&quot;\nbecause I&#x27;m nearly tearing my hair out trying to figure out why", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Taxi Driver</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">decent 7/10</span>}</div>"}, {"index": 34, "class": "opinion_statement", "text": "highly regarded as it is", "color": "#D2E3FC", "startPos": 9154, "endPos": 9178, "beforeText": "y I&#x27;m wrong, or what I&#x27;ve clearly missed,\n&quot;&quot;&quot;\n\n**Page 4**\n&quot;&quot;&quot;\nbecause I&#x27;m nearly tearing my hair out trying to figure out why this movie is quite as \n", "extractionText": "highly regarded as it is", "afterText": ". \n \n[Reviewer: andrew7] \nRating: 10/10 \nReview: Disturbing, powerful, relevant, important \n. A towering classic of American cinematic power. Martin S", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">this movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">highly regarded</span>}</div>"}, {"index": 35, "class": "opinion_statement", "text": "Disturbing, powerful, relevant, important", "color": "#D2E3FC", "startPos": 9227, "endPos": 9268, "beforeText": " nearly tearing my hair out trying to figure out why this movie is quite as \nhighly regarded as it is. \n \n[Reviewer: andrew7] \nRating: 10/10 \nReview: ", "extractionText": "Disturbing, powerful, relevant, important", "afterText": " \n. A towering classic of American cinematic power. Martin Scorsese teams up with \none of the most intense actors of that time to create a masterpiece", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Review</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">Disturbing, powerful, relevant, important</span>}</div>"}, {"index": 36, "class": "opinion_statement", "text": "towering classic of American cinematic power", "color": "#D2E3FC", "startPos": 9274, "endPos": 9318, "beforeText": "t why this movie is quite as \nhighly regarded as it is. \n \n[Reviewer: andrew7] \nRating: 10/10 \nReview: Disturbing, powerful, relevant, important \n. A ", "extractionText": "towering classic of American cinematic power", "afterText": ". Martin Scorsese teams up with \none of the most intense actors of that time to create a masterpiece of urban \nalienation. Paul Schrader&#x27;s magnificent", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Review</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">towering classic</span>}</div>"}, {"index": 37, "class": "opinion_statement", "text": "create a masterpiece of urban alienation", "color": "#D2E3FC", "startPos": 9398, "endPos": 9439, "beforeText": " relevant, important \n. A towering classic of American cinematic power. Martin Scorsese teams up with \none of the most intense actors of that time to ", "extractionText": "create a masterpiece of urban \nalienation", "afterText": ". Paul Schrader&#x27;s magnificent script paints a portrait of loneliness in the \nlargest city of the world. Travis never once enters into a meaningful rel", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Martin Scorsese</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">masterpiece</span>}</div>"}, {"index": 38, "class": "opinion_statement", "text": "magnificent script", "color": "#D2E3FC", "startPos": 9457, "endPos": 9475, "beforeText": "matic power. Martin Scorsese teams up with \none of the most intense actors of that time to create a masterpiece of urban \nalienation. Paul Schrader&#x27;s ", "extractionText": "magnificent script", "afterText": " paints a portrait of loneliness in the \nlargest city of the world. Travis never once enters into a meaningful relationship with \nany character anywhe", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Paul Schrader&#x27;s script</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">magnificent</span>}</div>"}, {"index": 39, "class": "opinion_statement", "text": "hopelessly alone person", "color": "#D2E3FC", "startPos": 9656, "endPos": 9679, "beforeText": "s in the \nlargest city of the world. Travis never once enters into a meaningful relationship with \nany character anywhere in the film. He is the most ", "extractionText": "hopelessly alone person", "afterText": " I&#x27;ve ever \nencountered on film. \n \nHe is alone with his thoughts, and his thoughts are dark ones. The film fools you on a \nfirst viewing. Is Travis a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Travis</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">hopelessly alone</span>}</div>"}, {"index": 40, "class": "opinion_statement", "text": "endearing eccentric", "color": "#D2E3FC", "startPos": 9831, "endPos": 9850, "beforeText": "&#x27;ve ever \nencountered on film. \n \nHe is alone with his thoughts, and his thoughts are dark ones. The film fools you on a \nfirst viewing. Is Travis an ", "extractionText": "endearing eccentric", "afterText": "? Sure, he&#x27;s odd, but he&#x27;s so polite, and \nhe&#x27;s got a quirky sense of humor. His affection for Betsy is actually rather endearing. \nBut on a second vi", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Travis</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">endearing eccentric</span>}</div>"}, {"index": 41, "class": "opinion_statement", "text": "rather endearing", "color": "#D2E3FC", "startPos": 9963, "endPos": 9979, "beforeText": "ing. Is Travis an endearing eccentric? Sure, he&#x27;s odd, but he&#x27;s so polite, and \nhe&#x27;s got a quirky sense of humor. His affection for Betsy is actually ", "extractionText": "rather endearing", "afterText": ". \nBut on a second view, you see it for what it is. The audience comes to see Travis&#x27;s \npsychosis gradually, but there&#x27;s actually far less development", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">His affection for Betsy</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">endearing</span>}</div>"}, {"index": 42, "class": "opinion_statement", "text": "Tremendous supporting roles are brought to life through vivid performances by Keitel and Foster especially", "color": "#D2E3FC", "startPos": 10480, "endPos": 10587, "beforeText": " a kind of snapshot. To be sure, it takes the stimulus to provoke the response, but \ndoes that imply some kind of central change in the character? \n \n", "extractionText": "Tremendous supporting roles are brought to life through vivid performances by \nKeitel and Foster especially", "afterText": ". Shepard&#x27;s character, Betsy, is little more than a foil to \nhighlight Travis&#x27;s utter alienation from society, but she is still impeccably portrayed. ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">supporting roles</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">Tremendous supporting roles are brought to life through vivid performances</span>}</div>"}, {"index": 43, "class": "opinion_statement", "text": "Shepard's character, Betsy, is little more than a foil to highlight Travis's utter alienation from society, but she is still impeccably portrayed", "color": "#D2E3FC", "startPos": 10589, "endPos": 10735, "beforeText": "d of central change in the character? \n \nTremendous supporting roles are brought to life through vivid performances by \nKeitel and Foster especially. ", "extractionText": "Shepard&#x27;s character, Betsy, is little more than a foil to \nhighlight Travis&#x27;s utter alienation from society, but she is still impeccably portrayed", "afterText": ". \nWith only two scenes that don&#x27;t center on Travis, it is unavoidably De Niro&#x27;s show. The \nlife with which the supporting cast imbues their character", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Shepard&#x27;s character, Betsy</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">is little more than a foil to highlight Travis&#x27;s utter alienation from society, but she is still impeccably portrayed</span>}</div>"}, {"index": 44, "class": "opinion_statement", "text": "it is unavoidably De Niro's show", "color": "#D2E3FC", "startPos": 10788, "endPos": 10820, "beforeText": " foil to \nhighlight Travis&#x27;s utter alienation from society, but she is still impeccably portrayed. \nWith only two scenes that don&#x27;t center on Travis, ", "extractionText": "it is unavoidably De Niro&#x27;s show", "afterText": ". The \nlife with which the supporting cast imbues their characters is a credit to themselves, \nand to the director&#x27;s willingness to let the film devel", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">De Niro</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">it is unavoidably De Niro&#x27;s show</span>}</div>"}, {"index": 45, "class": "opinion_statement", "text": "As a piece of American cinema history, this film will live forever", "color": "#D2E3FC", "startPos": 11269, "endPos": 11335, "beforeText": ". He makes almost no impact on Travis&#x27;s life, \nwhich is where the plot lives. But his inclusion makes the film as a whole much richer \nand fuller. \n \n", "extractionText": "As a piece of American cinema history, this film will live forever", "afterText": ". But far more \nimportant than that, this film will survive as a universal, ever-relevant examination of \nthe workings of the alienated mind. The stor", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">will live forever</span>}</div>"}, {"index": 46, "class": "opinion_statement", "text": "this film will survive as a universal, ever-relevant examination of the workings of the alienated mind", "color": "#D2E3FC", "startPos": 11372, "endPos": 11475, "beforeText": "he film as a whole much richer \nand fuller. \n \nAs a piece of American cinema history, this film will live forever. But far more \nimportant than that, ", "extractionText": "this film will survive as a universal, ever-relevant examination of \nthe workings of the alienated mind", "afterText": ". The story doesn&#x27;t end when the credits roll. We \nknow Travis will snap again. But the story doesn&#x27;t end with Travis either. It continues \ntoday in t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">will survive as a universal, ever-relevant examination</span>}</div>"}, {"index": 47, "class": "opinion_statement", "text": "The film is about the brutal power of the disaffected mind", "color": "#D2E3FC", "startPos": 11655, "endPos": 11714, "beforeText": "he credits roll. We \nknow Travis will snap again. But the story doesn&#x27;t end with Travis either. It continues \ntoday in the cities and in the schools. ", "extractionText": "The film is about the brutal power of the \ndisaffected mind", "afterText": ".\n&quot;&quot;&quot;\n\n**Page 5**\n&quot;&quot;&quot;\nThis film didn&#x27;t cause the incidents in Colombine, or Hawaii, or Seattle, or wherever \nyou care to look, even with all of its di", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">is about the brutal power</span>}</div>"}, {"index": 48, "class": "opinion_statement", "text": "This film didn't cause the incidents in Colombine, or Hawaii, or Seattle, or wherever you care to look, even with all of its disturbing images of violence.", "color": "#D2E3FC", "startPos": 11736, "endPos": 11892, "beforeText": "Travis either. It continues \ntoday in the cities and in the schools. The film is about the brutal power of the \ndisaffected mind.\n&quot;&quot;&quot;\n\n**Page 5**\n&quot;&quot;&quot;\n", "extractionText": "This film didn&#x27;t cause the incidents in Colombine, or Hawaii, or Seattle, or wherever \nyou care to look, even with all of its disturbing images of violence.", "afterText": " It didn&#x27;t cause \nthose things. It predicted them.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">This film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">didn&#x27;t cause the incidents</span>}</div>"}, {"index": 49, "class": "opinion_statement", "text": "It predicted them.", "color": "#D2E3FC", "startPos": 11924, "endPos": 11942, "beforeText": "n Colombine, or Hawaii, or Seattle, or wherever \nyou care to look, even with all of its disturbing images of violence. It didn&#x27;t cause \nthose things. ", "extractionText": "It predicted them.", "afterText": "\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">It</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">predicted them</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
